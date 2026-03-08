@@ -26,24 +26,19 @@ collections:
       - label: Título
         name: title
         widget: string
-
       - label: Descrição
         name: description
         widget: text
-
       - label: Imagem
         name: image
         widget: image
-
       - label: Data
         name: date
         widget: datetime
         format: "YYYY-MM-DD"
-
       - label: Resultados
         name: results
         widget: list
-
       - label: Conteúdo
         name: body
         widget: markdown
@@ -57,24 +52,19 @@ collections:
       - label: Título
         name: title
         widget: string
-
       - label: Descrição
         name: description
         widget: text
-
       - label: Categoria
         name: category
         widget: string
-
       - label: Imagem
         name: image
         widget: image
-
       - label: Data
         name: date
         widget: datetime
         format: "YYYY-MM-DD"
-
       - label: Conteúdo
         name: body
         widget: markdown
@@ -88,11 +78,9 @@ collections:
       - label: Título
         name: title
         widget: string
-
       - label: Descrição
         name: description
         widget: text
-
       - label: Conteúdo
         name: body
         widget: markdown
