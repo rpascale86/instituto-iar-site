@@ -1,52 +1,98 @@
 backend:
   name: github
-  repo: owner/repo
+  repo: rpascale86/instituto-iar-site
   branch: main
-  base_url: https://seu-oauth-proxy.exemplo.com
 
-local_backend: true
 publish_mode: editorial_workflow
 media_folder: public/uploads
 public_folder: /uploads
+
 site_url: https://institutoiar.org.br
+display_url: https://institutoiar.org.br
 logo_url: /icon.svg
+
 slug:
   encoding: ascii
   clean_accents: true
-  sanitize_replacement: '-'
+  sanitize_replacement: "-"
+
 collections:
   - name: projects
     label: Projetos
     folder: content/projects
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
-      - { label: Título, name: title, widget: string }
-      - { label: Descrição, name: description, widget: text }
-      - { label: Imagem, name: image, widget: image }
-      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD' }
+      - label: Título
+        name: title
+        widget: string
+
+      - label: Descrição
+        name: description
+        widget: text
+
+      - label: Imagem
+        name: image
+        widget: image
+
+      - label: Data
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+
       - label: Resultados
         name: results
         widget: list
-      - { label: Conteúdo, name: body, widget: markdown }
+
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
   - name: posts
     label: Notícias e Impacto
     folder: content/posts
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
-      - { label: Título, name: title, widget: string }
-      - { label: Descrição, name: description, widget: text }
-      - { label: Categoria, name: category, widget: string }
-      - { label: Imagem, name: image, widget: image }
-      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD' }
-      - { label: Conteúdo, name: body, widget: markdown }
+      - label: Título
+        name: title
+        widget: string
+
+      - label: Descrição
+        name: description
+        widget: text
+
+      - label: Categoria
+        name: category
+        widget: string
+
+      - label: Imagem
+        name: image
+        widget: image
+
+      - label: Data
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
   - name: pages
     label: Páginas institucionais
     folder: content/pages
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
-      - { label: Título, name: title, widget: string }
-      - { label: Descrição, name: description, widget: text }
-      - { label: Conteúdo, name: body, widget: markdown }
+      - label: Título
+        name: title
+        widget: string
+
+      - label: Descrição
+        name: description
+        widget: text
+
+      - label: Conteúdo
+        name: body
+        widget: markdown
